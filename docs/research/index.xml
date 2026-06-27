@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>研究 on 香川大学医学部附属病院 呼吸器・乳腺内分泌外科</title><link>https://kagawa-u-dainigeka.jp/research/</link><description>Recent content in 研究 on 香川大学医学部附属病院 呼吸器・乳腺内分泌外科</description><generator>Hugo</generator><language>ja</language><atom:link href="https://kagawa-u-dainigeka.jp/research/index.xml" rel="self" type="application/rss+xml"/><item><title>業績集</title><link>https://kagawa-u-dainigeka.jp/research/achievements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kagawa-u-dainigeka.jp/research/achievements/</guid><description/></item><item><title>研究概要</title><link>https://kagawa-u-dainigeka.jp/research/outline/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kagawa-u-dainigeka.jp/research/outline/</guid><description>&lt;div class="content-section"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>研究 on 香川大学医学部附属病院 呼吸器・乳腺内分泌外科</title><link>https://nori969.github.io/kagawa-u-dainigeka/research/</link><description>Recent content in 研究 on 香川大学医学部附属病院 呼吸器・乳腺内分泌外科</description><generator>Hugo</generator><language>ja</language><atom:link href="https://nori969.github.io/kagawa-u-dainigeka/research/index.xml" rel="self" type="application/rss+xml"/><item><title>業績集</title><link>https://nori969.github.io/kagawa-u-dainigeka/research/achievements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nori969.github.io/kagawa-u-dainigeka/research/achievements/</guid><description/></item><item><title>研究概要</title><link>https://nori969.github.io/kagawa-u-dainigeka/research/outline/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nori969.github.io/kagawa-u-dainigeka/research/outline/</guid><description>&lt;div class="content-section"&gt;
 &lt;h2 id="腫瘍免疫に関する基礎研究"&gt;腫瘍免疫に関する基礎研究&lt;/h2&gt;
 &lt;h3 id="活性化cd8t細胞における疲弊化誘導メカニズムの解明"&gt;活性化CD8T細胞における疲弊化誘導メカニズムの解明&lt;/h3&gt;
 &lt;p&gt;腫瘍抗原特異的CD8T細胞は腫瘍免疫応答で重要な役割を担っていますが、それらは疲弊化し十分な抗腫瘍効果を発揮できないことが知られています。近年、PD-1/PD-L1を含めた免疫チェックポイント分子がその疲弊化誘導のメカニズムとして解明され、そのシグナルをブロックする癌免疫療法が肺癌を含めた多くの癌種において臨床応用されています。&lt;/p&gt;
 &lt;p&gt;しかしながら、その効果は一部の症例に限定され一時的で、更なる疲弊化誘導メカニズムが存在することが想定されます。近年、新規免疫チェックポイント分子としてLAG-3、TIM-3、TIGITなどが報告されていますが、その役割はいまだに不明な点も多く、未知の免疫チェックポイント分子が存在する可能性もあります。&lt;/p&gt;
 &lt;p&gt;これらを解明する上で問題となるのは、腫瘍免疫応答で誘導される抗原特異的CD8T細胞はその数が少なく解析困難なことがあげられます。我々はこの問題を解決するため、&lt;strong&gt;OT-Iマウスを用いたマウス腫瘍モデルを確立&lt;/strong&gt;し、抗原特異的疲弊化CD8T細胞を生体内の10〜50倍まで誘導可能となりました。これらの系で疲弊化誘導の分子機構を解析すると共に新規免疫チェックポイントの探索を行っています。さらにこのモデルを用いて臨床課題を克服するための様々な研究をすすめています。&lt;/p&gt;
 &lt;p&gt;これらの研究成果は新規癌免疫療法の開発につながる可能性があり、さらに外科臨床課題克服に直結する点で意義の高い研究と考えております。&lt;/p&gt;
-&lt;img src="https://kagawa-u-dainigeka.jp/images/research/checkpoint.jpg" alt="免疫チェックポイント分子" style="margin: 24px 0; width: 100%;"&gt;
+&lt;img src="https://nori969.github.io/kagawa-u-dainigeka/images/research/checkpoint.jpg" alt="免疫チェックポイント分子" style="margin: 24px 0; width: 100%;"&gt;
 &lt;/div&gt;
 &lt;div class="content-section"&gt;
 &lt;h2 id="大動物実験について"&gt;大動物実験について&lt;/h2&gt;
@@ -18,13 +18,13 @@
 &lt;p&gt;これまでは空気が入っているところと入っていないところの境目を切るという方法を用いていましたが、不明瞭になることがありました。ICG、赤外光を用いた方法では、含気ではなく肺の血流から肺を切除する区域間を同定するものです。より確実で安全な肺実質の切離を可能とします。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;この方法は当科が2009年に世界で初めて発表しています&lt;/strong&gt;（Misaki N. et al. J Thorac Cardiovasc Surg. 2010 Oct;140(4):752-6.）。以後この方法は世界中で行われており、区域間同定方法では2022年において日本で最も行われている方法の一つとなっています。&lt;/p&gt;
 &lt;p&gt;現在行っている研究では各患者さんに合わせた&lt;strong&gt;最適なICGの投与量、投与速度の定型化&lt;/strong&gt;するための実験をおこなっております。症例によって蛍光具合にばらつきがあるため、区域間同定に最適な投与方法、速度などを研究しています。&lt;/p&gt;
-&lt;img src="https://kagawa-u-dainigeka.jp/images/research/icg-comparison.jpg" alt="ICG赤外光胸腔鏡による区域間同定の蛍光比較" style="margin: 24px 0; width: 100%;"&gt;
+&lt;img src="https://nori969.github.io/kagawa-u-dainigeka/images/research/icg-comparison.jpg" alt="ICG赤外光胸腔鏡による区域間同定の蛍光比較" style="margin: 24px 0; width: 100%;"&gt;
 &lt;p style="font-size: 13px; color: #666; margin-top: -16px;"&gt;当科が世界で初めて報告し、現在世界的にも一般的となっているICG赤外光胸腔鏡による区域間同定。症例によって蛍光具合にばらつきがあり、最適な投与方法を研究しています。&lt;/p&gt;
 &lt;h4 id="肺瘻同定"&gt;肺瘻同定&lt;/h4&gt;
 &lt;p&gt;肺瘻つまり肺からの空気漏れの同定は昔から古典的な方法で行われています。自転車のパンク修理と同様に、胸腔内に生理食塩水を入れて麻酔科から肺を拡張してもらい、ポコポコと水泡が出るかで同定しています。方法が単純ですが、肺を虚脱させるとわからなくなるというデメリットがあります。&lt;/p&gt;
 &lt;p&gt;そこで本研究ではICGを経気道的に散布します。ICGが肺全体にいきわたったところで、圧をかけます。その状態で赤外光で観察すると空気漏れがある場所は胸膜が欠損しており、&lt;strong&gt;空気漏れがある部位だけが蛍光される&lt;/strong&gt;という方法です。&lt;/p&gt;
 &lt;p&gt;メリットとしてはICGが残存される限り肺が拡張していようが、虚脱していようが肺瘻部位の確認が行えます。すでに動物実験において有効性は確認できております。ただICGの経気道散布は保険適用されていません。そのため現在臨床研究を行っています。&lt;/p&gt;
-&lt;img src="https://kagawa-u-dainigeka.jp/images/research/icg-fistula.jpg" alt="経気道的にICGエアロゾル投与する新たな肺瘻同定の研究" style="margin: 24px 0; width: 100%;"&gt;
+&lt;img src="https://nori969.github.io/kagawa-u-dainigeka/images/research/icg-fistula.jpg" alt="経気道的にICGエアロゾル投与する新たな肺瘻同定の研究" style="margin: 24px 0; width: 100%;"&gt;
 &lt;p style="font-size: 13px; color: #666; margin-top: -16px;"&gt;経気道的にICGエアロゾル投与する新たな肺瘻同定の研究（光っている箇所が肺瘻部位）&lt;/p&gt;
 &lt;h3 id="2肺胞再生"&gt;2）肺胞再生&lt;/h3&gt;
 &lt;p&gt;肺気腫は罹患患者も多く一般的な疾患ですが難治性で根治的な治療は肺移植しかありません。しかし肺移植は我が国では恒常的にドナー不足のため標準治療とはなりえません。&lt;strong&gt;線維芽細胞増殖因子（bFGF）とゼラチンを組み合わせた肺胞再生&lt;/strong&gt;についての研究を行っています。&lt;/p&gt;
@@ -34,7 +34,7 @@
 &lt;p&gt;結果は組織学的に肺気腫の気腫化の程度の改善と血管の増生を認め、機能的には酸素化能の改善を認めました。肺気腫により障害された肺胞の微小血管が増殖因子の徐放によって増生したことで酸素化能が改善したと推察されます。ただし臨床応用を行うためには保険適応外のゼラチンマイクロスフィアを血中に投与する必要があり、その安全性を担保することが困難でした。&lt;/p&gt;
 &lt;h4 id="ゼラチンシートを用いた実験"&gt;ゼラチンシートを用いた実験&lt;/h4&gt;
 &lt;p&gt;イヌ肺気腫モデルを作成後に、bFGF徐放ゼラチンシートを臓側胸膜（肺の表面）に固定して、気腫性変化を病理学的に評価する実験です。結果はbFGF徐放ゼラチンシートを使用した方が気腫性変化は残存しているものの改善傾向を認めたことがわかりました。現在、更に研究を進め臨床応用を目指したいと考えております。&lt;/p&gt;
-&lt;img src="https://kagawa-u-dainigeka.jp/images/research/bfgf-regeneration.jpg" alt="大動物肺気腫モデルの肺にbFGF徐放ゼラチンシートを貼付した肺胞再生の研究" style="margin: 24px 0; width: 100%;"&gt;
+&lt;img src="https://nori969.github.io/kagawa-u-dainigeka/images/research/bfgf-regeneration.jpg" alt="大動物肺気腫モデルの肺にbFGF徐放ゼラチンシートを貼付した肺胞再生の研究" style="margin: 24px 0; width: 100%;"&gt;
 &lt;p style="font-size: 13px; color: #666; margin-top: -16px;"&gt;大動物肺気腫モデルの肺にbFGF徐放ゼラチンシートを貼付した肺胞再生の研究&lt;/p&gt;
 &lt;h3 id="3気管再生"&gt;3）気管再生&lt;/h3&gt;
 &lt;p&gt;気管はその解剖学的特性から、外傷や腫瘍などによってその再建が要求された場合に切除範囲に制限が設けられます。この制限範囲を越えた場合には再建が不可能となります。この切除範囲の制限を打開する目的で、以前より当科では生体吸収性人工気管の作成を試みてきました。&lt;/p&gt;</description></item></channel></rss>
