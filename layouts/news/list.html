@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">ホーム</a> &gt; NEWS
+  </div>
+  <div class="page-header">
+    <h1>NEWS</h1>
+  </div>
+  <ul class="news-list">
+    {{ range .Pages.ByDate.Reverse }}
+    <li class="news-item">
+      <span class="news-date">{{ .Date.Format "2006.01.02" }}</span>
+      <span class="news-title"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
+    </li>
+    {{ else }}
+    <li class="news-item"><span class="news-title">記事はまだありません。</span></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

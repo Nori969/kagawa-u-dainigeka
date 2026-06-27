@@ -1,0 +1,141 @@
+baseURL = "https://kagawa-u-dainigeka.jp/"
+locale = "ja"
+title = "香川大学医学部附属病院 呼吸器・乳腺内分泌外科"
+publishDir = "docs"
+
+[params]
+  description = "香川大学医学部附属病院 呼吸器・乳腺内分泌外科の公式ウェブサイト"
+  address = "〒761-0793 香川県木田郡三木町池戸1750-1"
+  tel = "087-898-5111"
+
+[menu]
+  [[menu.main]]
+    identifier = "intro"
+    name = "教室紹介"
+    url = "/intro/"
+    weight = 1
+  [[menu.main]]
+    identifier = "intro-greetings"
+    name = "教授ご挨拶"
+    parent = "intro"
+    url = "/intro/greetings/"
+    weight = 1
+  [[menu.main]]
+    identifier = "intro-history"
+    name = "教室沿革"
+    parent = "intro"
+    url = "/intro/history/"
+    weight = 2
+  [[menu.main]]
+    identifier = "intro-to-pt-mp"
+    name = "患者様・医療関係者の方へ"
+    parent = "intro"
+    url = "/intro/to-pt-mp/"
+    weight = 3
+  [[menu.main]]
+    identifier = "to-pt-mp"
+    name = "患者様・医療関係者の皆様へ"
+    url = "/intro/to-pt-mp/"
+    weight = 7
+  [[menu.main]]
+    identifier = "thoracic"
+    name = "呼吸器外科"
+    url = "/thoracic/"
+    weight = 2
+  [[menu.main]]
+    identifier = "thoracic-greetings"
+    name = "診療科長ご挨拶"
+    parent = "thoracic"
+    url = "/thoracic/greetings/"
+    weight = 1
+  [[menu.main]]
+    identifier = "thoracic-staff"
+    name = "スタッフ紹介"
+    parent = "thoracic"
+    url = "/thoracic/staff/"
+    weight = 2
+  [[menu.main]]
+    identifier = "thoracic-contents"
+    name = "診療内容"
+    parent = "thoracic"
+    url = "/thoracic/contents/"
+    weight = 3
+  [[menu.main]]
+    identifier = "thoracic-mio"
+    name = "低侵襲手術の取り組み"
+    parent = "thoracic"
+    url = "/thoracic/mio/"
+    weight = 4
+  [[menu.main]]
+    identifier = "thoracic-schedule"
+    name = "診察予定表"
+    parent = "thoracic"
+    url = "/thoracic/schedule/"
+    weight = 5
+  [[menu.main]]
+    identifier = "breast"
+    name = "乳腺内分泌外科"
+    url = "/breast/"
+    weight = 3
+  [[menu.main]]
+    identifier = "breast-greetings"
+    name = "診療科長ご挨拶"
+    parent = "breast"
+    url = "/breast/greetings/"
+    weight = 1
+  [[menu.main]]
+    identifier = "breast-staff"
+    name = "スタッフ紹介"
+    parent = "breast"
+    url = "/breast/staff/"
+    weight = 2
+  [[menu.main]]
+    identifier = "breast-contents"
+    name = "診療内容"
+    parent = "breast"
+    url = "/breast/contents/"
+    weight = 3
+  [[menu.main]]
+    identifier = "breast-schedule"
+    name = "診察予定表"
+    parent = "breast"
+    url = "/breast/schedule/"
+    weight = 4
+  [[menu.main]]
+    identifier = "research"
+    name = "研究"
+    url = "/research/"
+    weight = 4
+  [[menu.main]]
+    identifier = "research-outline"
+    name = "研究概要"
+    parent = "research"
+    url = "/research/outline/"
+    weight = 1
+  [[menu.main]]
+    identifier = "research-achievements"
+    name = "業績集"
+    parent = "research"
+    url = "/research/achievements/"
+    weight = 2
+  [[menu.main]]
+    identifier = "resident"
+    name = "研修医・学生の方へ"
+    url = "/resident/"
+    weight = 5
+  [[menu.main]]
+    identifier = "resident-training"
+    name = "研修内容・入局案内"
+    parent = "resident"
+    url = "/resident/training/"
+    weight = 1
+  [[menu.main]]
+    identifier = "news"
+    name = "NEWS"
+    url = "/news/"
+    weight = 6
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="hero hero-video" style="min-height:400px;">
+  <video class="hero-video-bg" autoplay muted loop playsinline>
+    <source src="/video/resident-hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p style="font-size:14px; letter-spacing:4px; opacity:0.7;">Kagawa University</p>
+    <h1 style="font-family:'Noto Serif JP',serif; font-size:32px; font-weight:600; letter-spacing:3px; text-shadow:0 2px 8px rgba(0,0,0,0.4); margin:12px 0;">研修医・学生の方へ</h1>
+    <div class="hero-divider"></div>
+    <p style="font-size:16px; opacity:0.85; letter-spacing:2px;">心と体に優しい外科医療の実践を目指して</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="card-grid">
+    {{ range .Pages }}
+    <a href="{{ .Permalink }}" class="card">
+      <div class="card-body">
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Params.description }}</p>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

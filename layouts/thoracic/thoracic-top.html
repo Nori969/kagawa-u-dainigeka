@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="hero hero-video">
+  <video class="hero-video-bg" autoplay muted loop playsinline>
+    <source src="/video/hero-bg.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-sub">Kagawa University Hospital</p>
+    <h1><span class="hero-line1">香川大学医学部附属病院</span><br><span class="hero-line2">呼吸器外科</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-motto">心と身体に優しい外科医療を実践する</p>
+  </div>
+</section>
+
+<div class="container">
+  <p style="margin-bottom:32px;">肺癌を中心に転移性肺腫瘍、縦隔腫瘍、気胸、膿胸、胸壁腫瘍など胸部の悪性疾患および救急疾患の診療にあたっています。</p>
+  <div class="card-grid">
+    {{ range .Pages }}
+    <a href="{{ .Permalink }}" class="card">
+      <div class="card-body">
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Params.description }}</p>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

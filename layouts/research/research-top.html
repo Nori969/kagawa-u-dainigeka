@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="hero hero-video">
+  <video class="hero-video-bg" autoplay muted loop playsinline>
+    <source src="/video/rats-s3b.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-sub">Research</p>
+    <h1><span class="hero-line2">研究</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-motto">臨床課題克服を目指した基礎研究と臨床研究</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="card-grid">
+    {{ range .Pages }}
+    <a href="{{ .Permalink }}" class="card">
+      <div class="card-body">
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Params.description }}</p>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

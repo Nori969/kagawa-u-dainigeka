@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">ホーム</a> &gt;
+    {{ with .Parent }}<a href="{{ .Permalink }}">{{ .Title }}</a> &gt;{{ end }}
+    {{ .Title }}
+  </div>
+  <div class="page-header">
+    <h1>{{ .Title }}</h1>
+  </div>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

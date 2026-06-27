@@ -1,0 +1,55 @@
+{{ define "main" }}
+<section class="hero hero-video">
+  <video class="hero-video-bg" autoplay muted loop playsinline>
+    <source src="/video/hero-bg.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-sub">Kagawa University Hospital</p>
+    <h1><span class="hero-line1">香川大学医学部附属病院</span><br><span class="hero-line2">呼吸器・乳腺内分泌外科</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-motto">心と身体に優しい外科医療を実践する</p>
+  </div>
+</section>
+
+<div class="home-sections">
+  <div class="home-news">
+    <h2>NEWS &amp; TOPICS</h2>
+    <ul class="news-list">
+      {{ range first 5 (where .Site.RegularPages "Section" "news") }}
+      <li class="news-item">
+        <span class="news-date">{{ .Date.Format "2006.01.02" }}</span>
+        <span class="news-title"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
+      </li>
+      {{ else }}
+      <li class="news-item">
+        <span class="news-date">2023.01.31</span>
+        <span class="news-title">ホームページ公開のお知らせ</span>
+      </li>
+      {{ end }}
+    </ul>
+    <a href="/news/" class="section-link">一覧を見る</a>
+  </div>
+
+  <div class="card-grid card-grid-3">
+    <a href="/intro/greetings/" class="card">
+      <div class="card-body">
+        <h3>教授ご挨拶</h3>
+        <p>心と身体に優しい外科医療の実践を目指して。教授 矢島俊樹からのメッセージ。</p>
+      </div>
+    </a>
+    <a href="/thoracic/" class="card">
+      <div class="card-body">
+        <h3>呼吸器外科</h3>
+        <p>肺癌を中心に、完全胸腔鏡下手術・ロボット支援手術を標準とした低侵襲手術を行っています。</p>
+      </div>
+    </a>
+    <a href="/breast/" class="card">
+      <div class="card-body">
+        <h3>乳腺内分泌外科</h3>
+        <p>乳癌の診断・治療を中心に、集学的治療、乳房再建、遺伝性乳がん対応など個別化医療を実践しています。</p>
+      </div>
+    </a>
+  </div>
+</div>
+{{ end }}

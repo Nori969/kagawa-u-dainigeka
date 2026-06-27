@@ -1,0 +1,32 @@
+<header class="site-header">
+  <div class="header-top">
+    <a href="/" class="site-logo">
+      香川大学医学部附属病院<small>呼吸器・乳腺内分泌外科</small>
+    </a>
+    <div class="header-contact">
+      TEL {{ .Site.Params.tel }}
+    </div>
+  </div>
+  <nav class="main-nav">
+    <button class="nav-toggle" onclick="toggleNav()" aria-label="メニュー">&#9776;</button>
+    <div class="nav-inner" id="navInner">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+        <div class="nav-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}" onclick="toggleDropdown(event, this)">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+          <div class="nav-dropdown">
+            {{ range .Children }}
+            <a href="{{ .URL }}">{{ .Name }}</a>
+            {{ end }}
+          </div>
+        </div>
+        {{ else if not .Parent }}
+        <div class="nav-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </nav>
+</header>
