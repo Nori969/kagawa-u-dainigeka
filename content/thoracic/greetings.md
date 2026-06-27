@@ -4,7 +4,7 @@ description: "呼吸器外科 診療科長からのメッセージ"
 ---
 
 <div style="float:right; margin:0 0 20px 24px; text-align:center;">
-  <img src="/images/yajima-portrait.jpg" alt="矢島 俊樹" style="width:400px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
+  <img src="/kagawa-u-dainigeka/images/yajima-portrait.jpg" alt="矢島 俊樹" style="width:400px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
   <p style="font-size:13px; color:#666; margin-top:8px;">診療科長 矢島 俊樹</p>
 </div>
 

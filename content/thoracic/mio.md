@@ -31,7 +31,7 @@ description: "胸腔鏡手術・ロボット支援手術・区域切除"
 
 当科では気管支または血管形成が必要な局所進行癌を除き、胸腔鏡手術を基本として手術を行っています。胸壁浸潤肺癌においても胸腔鏡下に癌が浸潤した肋骨を一部含めた胸壁合併切除を行い、可能な限り身体に負担の少ない手術を目指しています。
 
-<img src="/images/skin-incision-comparison.jpg" alt="各術式における皮膚切開（開胸手術・ロボット手術・胸腔鏡手術）" style="margin: 24px 0; width: 100%;">
+<img src="/kagawa-u-dainigeka/images/skin-incision-comparison.jpg" alt="各術式における皮膚切開（開胸手術・ロボット手術・胸腔鏡手術）" style="margin: 24px 0; width: 100%;">
 
 ### ロボット支援手術
 
@@ -41,13 +41,13 @@ description: "胸腔鏡手術・ロボット支援手術・区域切除"
 
 側胸部に2〜3cmほどの小切開創と8mmのポートを4か所設置し手術操作を行います。当科での一般的な胸腔鏡手術よりもポートが1か所増えますが、ポート径が細く、同一肋間に置くことから、術後疼痛は胸腔鏡手術と同等です。特に縦隔リンパ節郭清などの精緻な操作では、3D両眼視で術野を拡大して確認でき、多関節な鉗子（ロボット鉗子）を使用できるロボット支援下手術は大変有効です。
 
-<img src="/images/davinci-robot.jpg" alt="サージョンコンソールとダビンチロボットアーム" style="margin: 24px 0; width: 100%;">
+<img src="/kagawa-u-dainigeka/images/davinci-robot.jpg" alt="サージョンコンソールとダビンチロボットアーム" style="margin: 24px 0; width: 100%;">
 
 術者が同じ手術室にある操縦室（サージョンコンソール）で操作し、手術用ロボット ダビンチのアームを動かすことで、より繊細な手術が可能となります。
 
 <div style="margin: 24px 0; text-align: center;">
   <video autoplay muted loop playsinline style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-    <source src="/video/rats-s3b.mp4" type="video/mp4">
+    <source src="/kagawa-u-dainigeka/video/rats-s3b.mp4" type="video/mp4">
   </video>
   <p style="font-size: 13px; color: #666; margin-top: 8px;">ロボット支援胸腔鏡下 左肺S3b区域切除術</p>
 </div>
@@ -85,13 +85,13 @@ description: "胸腔鏡手術・ロボット支援手術・区域切除"
 
 肺区域切除では区域間の同定・切離が難しく、特に区域面が複数から形成されるとその操作が複雑となり難易度が高くなります。我々は幾多の創意工夫を重ね<strong>「すべての区域に対する肺区域切除」</strong>を確立しています。これにより病変の部位によらず全ての小型肺がんに対して呼吸機能を温存した根治手術が可能となります。
 
-<img src="/images/lung-segments.jpg" alt="香川大学では全ての区域に対する区域切除が可能（右肺10区域・左肺8区域）" style="margin: 24px 0; width: 100%;">
+<img src="/kagawa-u-dainigeka/images/lung-segments.jpg" alt="香川大学では全ての区域に対する区域切除が可能（右肺10区域・左肺8区域）" style="margin: 24px 0; width: 100%;">
 
 この手術で一番重要な区域間同定方法として、我々が<strong>世界で初めて開発し現在全国的に標準化されている「赤外光胸腔鏡とICGを用いた区域間同定法」</strong>を用いて行っています。これにより複雑な区域間を明瞭に同定することが可能となります。
 
 <div style="margin: 24px 0; text-align: center;">
   <video autoplay muted loop playsinline style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-    <source src="/video/rats-s3b.mp4" type="video/mp4">
+    <source src="/kagawa-u-dainigeka/video/rats-s3b.mp4" type="video/mp4">
   </video>
 </div>
 
