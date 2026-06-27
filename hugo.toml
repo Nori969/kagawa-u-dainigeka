@@ -6,7 +6,8 @@ publishDir = "docs"
 [params]
   description = "香川大学医学部附属病院 呼吸器・乳腺内分泌外科の公式ウェブサイト"
   address = "〒761-0793 香川県木田郡三木町池戸1750-1"
-  tel = "087-898-5111"
+  tel = "087-891-2191"
+  fax = "087-891-2192"
 
 [menu]
   [[menu.main]]
