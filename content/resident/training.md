@@ -44,11 +44,11 @@ description: "入局を検討されている方へ"
 <div style="display:flex; flex-wrap:wrap; gap:24px; justify-content:center; margin:24px 0;">
   <div style="text-align:center; flex:1; min-width:140px;">
     <p style="font-size:36px; font-weight:700; color:var(--primary); margin:0;">294</p>
-    <p style="font-size:13px; color:#666;">年間手術数（2023年）</p>
+    <p style="font-size:13px; color:#666;">呼吸器外科 年間手術数（2023年）</p>
   </div>
   <div style="text-align:center; flex:1; min-width:140px;">
     <p style="font-size:36px; font-weight:700; color:var(--primary); margin:0;">150+</p>
-    <p style="font-size:13px; color:#666;">肺癌手術数/年</p>
+    <p style="font-size:13px; color:#666;">呼吸器外科 肺癌手術数/年</p>
   </div>
   <div style="text-align:center; flex:1; min-width:140px;">
     <p style="font-size:36px; font-weight:700; color:var(--primary); margin:0;">235+</p>
@@ -102,12 +102,25 @@ description: "入局を検討されている方へ"
 
 ### 取得可能な資格
 
+#### 呼吸器外科
+
 - <strong>外科専門医</strong> — 外科領域の基礎となる資格（最短 卒後6年）
 - <strong>呼吸器外科専門医</strong> — 呼吸器外科医の基本となる資格（最短 卒後8年）
 - <strong>気管支鏡専門医</strong> — 気管支鏡のスペシャリスト（最短 卒後8年）
 - <strong>呼吸器専門医</strong> — 呼吸器の総合医として活躍（最短 卒後9年）
 - <strong>がん治療認定医</strong> — 抗がん剤治療の専門家（最短 卒後7年）
 - その他：胸腔鏡安全技術認定医、肺癌CT検診認定医 等
+
+#### 乳腺内分泌外科
+
+- <strong>外科専門医</strong> — 外科領域の基礎となる資格（最短 卒後6年）
+- <strong>乳腺専門医</strong> — 乳腺診療のスペシャリスト
+- <strong>乳腺指導医</strong> — 乳腺専門医の上位資格
+- <strong>がん治療認定医</strong> — 抗がん剤治療の専門家（最短 卒後7年）
+- <strong>遺伝性腫瘍専門医</strong> — 遺伝性乳癌卵巣癌（HBOC）等に対応
+- <strong>検診マンモグラフィ読影認定医</strong> — 乳がん検診の読影資格
+- <strong>乳がん検診超音波検査実施・判定医師</strong>
+- その他：乳房再建用エキスパンダー・インプラント責任医師 等
 
 </div>
 
