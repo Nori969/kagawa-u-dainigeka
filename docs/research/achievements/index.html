@@ -126,7 +126,11 @@
   </div>
 
   <div class="tab-container">
-    <div class="tab-buttons">
+    <div class="tab-buttons" style="margin-bottom:12px;">
+      <button class="tab-btn active" onclick="switchDept('thoracic', this)">呼吸器外科</button>
+      <button class="tab-btn" onclick="switchDept('breast', this)">乳腺内分泌外科</button>
+    </div>
+    <div class="tab-buttons" id="catButtons">
       <button class="tab-btn active" onclick="switchTab('yearly', this)">年度別</button>
       <button class="tab-btn" onclick="switchTab('paper-en', this)">論文（英文）</button>
       <button class="tab-btn" onclick="switchTab('paper-ja', this)">論文（和文）</button>
@@ -217,7 +221,7 @@ var achievements = [
       { cat: "paper-en", text: 'Yamada K, et al. "MMP-7 expression is associated with a higher rate of tumor spread through air spaces in resected lung adenocarcinomas." <em>Lung Cancer</em> 175:125-130, 2023.' },
       { cat: "paper-en", text: 'Fujimoto S, et al. "RNF128 expression in lung adenocarcinoma is a favorable prognostic factor associated with decreased tumor-associated macrophages." <em>Thoracic Cancer</em> 14:1581-1588, 2023.' },
       { cat: "paper-en", text: 'Matsuura N, Yajima T. "Pulmonary segmentectomy for early stage non-small cell lung cancer: when, for which cases and how." <em>J Thorac Dis</em> 15(3):956-959, 2023.' },
-      { cat: "paper-en", text: 'Murazawa C, Hashimoto N, Kuraishi K, Motoyama M, Hashimoto SI, Ikeuchi M, Norimura S, Matsunaga T, Teramoto K, Haba R, Abe N, Yajima T, Kontani K. "Status and prognostic value of immunological biomarkers of breast cancer." <em>Oncol Lett</em> 25(4):164, 2023.' },
+      { cat: "paper-en", dept: "breast", text: 'Murazawa C, Hashimoto N, Kuraishi K, Motoyama M, Hashimoto SI, Ikeuchi M, Norimura S, Matsunaga T, Teramoto K, Haba R, Abe N, Yajima T, Kontani K. "Status and prognostic value of immunological biomarkers of breast cancer." <em>Oncol Lett</em> 25(4):164, 2023.' },
       { cat: "paper-en", text: 'Kimura N, Kadota K, Ibuki E, Ishikawa R, Ikeda T, Yoshida C, Yajima T, Nishiyama A, Haba R. "(Pro)renin Receptor Down-regulation Is Associated With a Higher Risk of Recurrence in Lung Adenocarcinoma." <em>Anticancer Res</em> 43(12):5671-5680, 2023.' },
       { cat: "paper-en", text: 'Yoshida C, Kadota K, Yamada K, Fujimoto S, Ibuki E, Ishikawa R, Haba R, Yajima T. "CD44v6 downregulation as a prognostic factor for distant recurrence in resected stage I lung adenocarcinomas." <em>Clin Exp Med</em> 23(8):5191-5200, 2023.' },
       { cat: "paper-en", text: 'Kato A, Go T, Otsuki Y, Yokota N, Soo CS, Misaki N, Yajima T, Yokomise H. "Perpendicular implantation of porcine trachea extracellular matrix for enhanced xenogeneic scaffold surface epithelialization in a canine model." <em>Front Surg</em> 9:1089403, 2023.' }
@@ -235,19 +239,43 @@ var catLabels = {
   "lecture": "講演会"
 };
 
-function switchTab(mode, btn) {
-  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
-  if (btn) btn.classList.add('active');
-  else document.querySelector('.tab-btn').classList.add('active');
+var currentDept = 'thoracic';
+var currentMode = 'yearly';
 
+
+achievements.forEach(function(yr) {
+  yr.items.forEach(function(item) {
+    if (!item.dept) item.dept = 'thoracic';
+  });
+});
+
+function switchDept(dept, btn) {
+  currentDept = dept;
+  var deptBtns = btn.parentElement.querySelectorAll('.tab-btn');
+  deptBtns.forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  render();
+}
+
+function switchTab(mode, btn) {
+  currentMode = mode;
+  var catBtns = document.getElementById('catButtons').querySelectorAll('.tab-btn');
+  catBtns.forEach(function(b) { b.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
+  render();
+}
+
+function render() {
   var container = document.getElementById('achievements-content');
   var html = '';
 
-  if (mode === 'yearly') {
+  if (currentMode === 'yearly') {
     achievements.forEach(function(yr) {
+      var filtered = yr.items.filter(function(item) { return item.dept === currentDept; });
+      if (filtered.length === 0) return;
       html += '<div class="content-section"><h2>' + yr.year + '年</h2>';
       var grouped = {};
-      yr.items.forEach(function(item) {
+      filtered.forEach(function(item) {
         if (!grouped[item.cat]) grouped[item.cat] = [];
         grouped[item.cat].push(item);
       });
@@ -264,7 +292,7 @@ function switchTab(mode, btn) {
     var allItems = {};
     achievements.forEach(function(yr) {
       yr.items.forEach(function(item) {
-        if (item.cat === mode) {
+        if (item.cat === currentMode && item.dept === currentDept) {
           if (!allItems[yr.year]) allItems[yr.year] = [];
           allItems[yr.year].push(item);
         }
@@ -285,10 +313,14 @@ function switchTab(mode, btn) {
     }
   }
 
+  if (!html) {
+    html = '<div class="content-section"><p>該当する業績はまだ登録されていません。</p></div>';
+  }
+
   container.innerHTML = html;
 }
 
-document.addEventListener('DOMContentLoaded', function() { switchTab('yearly'); });
+document.addEventListener('DOMContentLoaded', function() { render(); });
 </script>
 
   </main>
