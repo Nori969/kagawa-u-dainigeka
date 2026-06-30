@@ -17,18 +17,6 @@
   </div>
 </section>
 
-<!-- スクロールナビゲーション -->
-<nav class="page-scroll-nav" id="pageScrollNav">
-  <div class="page-scroll-nav-inner">
-    <a href="#sec-about" class="psn-item">About Us</a>
-    <a href="#sec-thoracic" class="psn-item">呼吸器外科</a>
-    <a href="#sec-breast" class="psn-item">乳腺内分泌外科</a>
-    <a href="#sec-patients" class="psn-item">患者さんへ</a>
-    <a href="#sec-medical" class="psn-item">医療関係者へ</a>
-    <a href="#sec-mission" class="psn-item">Mission</a>
-    <a href="#sec-news" class="psn-item">News</a>
-  </div>
-</nav>
 
 <section id="sec-about" class="proto-section proto-intro">
   <div class="proto-container">
@@ -293,30 +281,6 @@
 .scroll-cue p { font-size:11px; letter-spacing:3px; opacity:0.7; }
 @keyframes scrollPulse { 0%,100%{opacity:0.3;} 50%{opacity:1;} }
 
-/* ページ内スクロールナビ */
-.page-scroll-nav {
-  position:sticky; top:0; z-index:90;
-  background:rgba(255,255,255,0.96); backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--border);
-  box-shadow:0 2px 8px rgba(0,0,0,0.06);
-  transform:translateY(-100%);
-  transition:transform 0.3s;
-}
-.page-scroll-nav.visible { transform:translateY(0); }
-.page-scroll-nav-inner {
-  max-width:1000px; margin:0 auto; padding:0 24px;
-  display:flex; gap:0; overflow-x:auto;
-  scrollbar-width:none;
-}
-.page-scroll-nav-inner::-webkit-scrollbar { display:none; }
-.psn-item {
-  flex-shrink:0; padding:12px 16px;
-  font-size:13px; font-weight:600; color:var(--text-light);
-  text-decoration:none; white-space:nowrap;
-  border-bottom:2px solid transparent;
-  transition:color 0.2s, border-color 0.2s;
-}
-.psn-item:hover, .psn-item.active { color:var(--primary); border-bottom-color:var(--primary); }
 
 .proto-container { max-width:1000px; margin:0 auto; padding:0 24px; }
 .proto-section { padding:80px 0; }
@@ -427,46 +391,6 @@
 </style>
 
 <script>
-// スクロールナビ表示制御 + スクロールスパイ
-(function(){
-  var nav = document.getElementById('pageScrollNav');
-  var hero = document.getElementById('sec-hero');
-  var sections = ['sec-about','sec-thoracic','sec-breast','sec-patients','sec-medical','sec-mission','sec-news'];
-  var items = document.querySelectorAll('.psn-item');
-
-  window.addEventListener('scroll', function(){
-    var heroBottom = hero.offsetTop + hero.offsetHeight - 80;
-    if(window.scrollY > heroBottom){ nav.classList.add('visible'); }
-    else { nav.classList.remove('visible'); }
-
-    var current = '';
-    sections.forEach(function(id){
-      var el = document.getElementById(id);
-      if(el && window.scrollY >= el.offsetTop - 120){ current = id; }
-    });
-    items.forEach(function(item){
-      var href = item.getAttribute('href').replace('#','');
-      item.classList.toggle('active', href === current);
-    });
-  });
-
-  // アンカークリックでスムーズスクロール
-  items.forEach(function(item){
-    item.addEventListener('click', function(e){
-      e.preventDefault();
-      var target = document.getElementById(item.getAttribute('href').replace('#',''));
-      if(target){ window.scrollTo({top: target.offsetTop - 50, behavior:'smooth'}); }
-    });
-  });
-})();
-
-// 医療関係者タブ切り替え
-function showMedTab(e, id){
-  document.querySelectorAll('.med-tab').forEach(function(t){ t.classList.remove('active'); });
-  document.querySelectorAll('.med-tab-content').forEach(function(c){ c.classList.remove('active'); });
-  e.currentTarget.classList.add('active');
-  document.getElementById(id).classList.add('active');
-}
 </script>
 
 {{ end }}
