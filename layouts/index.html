@@ -80,6 +80,26 @@
   </div>
 </section>
 
+<section class="proto-section proto-for-you">
+  <div class="proto-container">
+    <div class="for-you-grid">
+      <div class="for-you-card">
+        <p class="proto-eyebrow">For Patients</p>
+        <h3>患者さんへ</h3>
+        <p>手術を必要とするようなご病気を患った場合、恐怖と不安でいっぱいになると思います。我々は一人ひとりの患者様に真摯に向き合い、最適な治療方法をご提案します。ご心配な点はどうぞ遠慮なくご相談ください。</p>
+        <a href="/kagawa-u-dainigeka/intro/to-pt-mp/" class="proto-link">詳しく見る →</a>
+      </div>
+      <div class="for-you-divider"></div>
+      <div class="for-you-card">
+        <p class="proto-eyebrow">For Medical Professionals</p>
+        <h3>医療関係者の皆様へ</h3>
+        <p>紹介患者様の外来診察は月・水・金曜日に対応しております。胸部でお困りの際はいつでもご相談ください。ご紹介は香川大学医学部附属病院 地域連携室（FAX予約）にてお受けしております。</p>
+        <a href="/kagawa-u-dainigeka/intro/to-pt-mp/" class="proto-link">紹介・予約について →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="proto-section proto-pillars-head">
   <div class="proto-container">
     <p class="proto-eyebrow" style="text-align:center;">Our Mission</p>
@@ -216,6 +236,19 @@
 .pillar-hero-text h4 { font-size:24px; font-weight:600; letter-spacing:1px; margin-bottom:14px; transition:letter-spacing 0.3s; }
 .pillar-hero-link:hover .pillar-hero-text h4 { letter-spacing:2px; }
 .pillar-hero-text p { font-size:14px; opacity:0.85; max-width:480px; margin:0 auto; }
+
+.proto-for-you { background:var(--primary-dark); color:#fff; }
+.for-you-grid { display:grid; grid-template-columns:1fr auto 1fr; gap:48px; align-items:start; }
+.for-you-divider { width:1px; background:rgba(255,255,255,0.2); min-height:200px; margin-top:40px; }
+.for-you-card .proto-eyebrow { color:rgba(255,255,255,0.6); }
+.for-you-card h3 { font-family:"Noto Serif JP",serif; font-size:22px; color:#fff; margin-bottom:16px; font-weight:600; }
+.for-you-card p { font-size:14px; color:rgba(255,255,255,0.8); line-height:1.9; margin-bottom:20px; }
+.for-you-card .proto-link { color:#fff; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:2px; }
+
+@media (max-width:768px) {
+  .for-you-grid { grid-template-columns:1fr; gap:32px; }
+  .for-you-divider { width:100%; height:1px; min-height:auto; margin:0; }
+}
 
 .proto-news { background:var(--bg-white); }
 .proto-cta { background:var(--bg); }
