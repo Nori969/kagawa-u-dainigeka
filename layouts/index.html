@@ -139,47 +139,42 @@
       地域の先生方と患者様にとって信頼できる存在となれるよう、最善の治療を行って参ります。
     </p>
 
-    <!-- タブ -->
-    <div class="med-tabs">
-      <button class="med-tab active" onclick="showMedTab(event,'tab-th')">外来表（呼吸器）</button>
-      <button class="med-tab" onclick="showMedTab(event,'tab-br')">外来表（乳腺）</button>
-      <button class="med-tab" onclick="showMedTab(event,'tab-ref')">患者さん紹介の流れ</button>
-      <button class="med-tab" onclick="showMedTab(event,'tab-ctr')">総合地域医療連携センター</button>
-    </div>
+    <div class="med-stack">
 
-    <div class="med-tab-content active" id="tab-th">
-      <p class="med-tab-note">※ 緊急手術等で適宜変更となる場合があります。</p>
-      <table class="schedule-table-top">
-        <thead>
-          <tr><th>曜日</th><th>午前</th><th>午後</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>月</td><td>松浦 奈都美</td><td>—</td></tr>
-          <tr><td>火</td><td>—</td><td>—</td></tr>
-          <tr><td>水</td><td>矢島 俊樹（初診）/ 山田 楓</td><td>佐藤 佳代子</td></tr>
-          <tr><td>木</td><td>—</td><td>—</td></tr>
-          <tr><td>金</td><td>矢島 俊樹（初診）/ 三﨑 伯幸</td><td>—</td></tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="med-block">
+        <h3 class="med-block-title">外来表（呼吸器外科）</h3>
+        <p class="med-tab-note">※ 緊急手術等で適宜変更となる場合があります。</p>
+        <table class="schedule-table-top">
+          <thead>
+            <tr><th>曜日</th><th>午前</th><th>午後</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>月</td><td>松浦 奈都美</td><td>—</td></tr>
+            <tr><td>火</td><td>—</td><td>—</td></tr>
+            <tr><td>水</td><td>矢島 俊樹（初診）/ 山田 楓</td><td>佐藤 佳代子</td></tr>
+            <tr><td>木</td><td>—</td><td>—</td></tr>
+            <tr><td>金</td><td>矢島 俊樹（初診）/ 三﨑 伯幸</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="med-tab-content" id="tab-br">
-      <p class="med-tab-note">※ 緊急手術等で適宜変更となる場合があります。</p>
-      <table class="schedule-table-top">
-        <thead>
-          <tr><th>曜日</th><th>午前</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>月</td><td>阿部 宣子 / 矢島 玲奈</td></tr>
-          <tr><td>火</td><td>—</td></tr>
-          <tr><td>水</td><td>阿部 宣子 / 矢島 玲奈 / 池内 真由美</td></tr>
-          <tr><td>木</td><td>—</td></tr>
-          <tr><td>金</td><td>池内 真由美</td></tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="med-block">
+        <h3 class="med-block-title">外来表（乳腺内分泌外科）</h3>
+        <p class="med-tab-note">※ 緊急手術等で適宜変更となる場合があります。</p>
+        <table class="schedule-table-top">
+          <thead>
+            <tr><th>曜日</th><th>午前</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>月</td><td>阿部 宣子 / 矢島 玲奈</td></tr>
+            <tr><td>火</td><td>—</td></tr>
+            <tr><td>水</td><td>阿部 宣子 / 矢島 玲奈 / 池内 真由美</td></tr>
+            <tr><td>木</td><td>—</td></tr>
+            <tr><td>金</td><td>池内 真由美</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="med-tab-content" id="tab-ref">
       <a href="https://www.med.kagawa-u.ac.jp/hosp/shinryoka/chiikirenkei/" target="_blank" rel="noopener" class="med-link-card">
         <div class="med-link-icon">📋</div>
         <div>
@@ -188,9 +183,7 @@
           <span>香川大学医学部附属病院 地域連携ページへ →</span>
         </div>
       </a>
-    </div>
 
-    <div class="med-tab-content" id="tab-ctr">
       <a href="https://www.med.kagawa-u.ac.jp/hosp/shinryoka/chiikirenkei/" target="_blank" rel="noopener" class="med-link-card">
         <div class="med-link-icon">🏢</div>
         <div>
@@ -199,6 +192,7 @@
           <span>総合地域医療連携センターページへ →</span>
         </div>
       </a>
+
     </div>
   </div>
 </section>
@@ -381,18 +375,10 @@
 .patient-link-card p { font-size:14px; color:var(--text-light); margin:0 0 8px; }
 .patient-link-card span { font-size:13px; color:var(--primary-light); font-weight:600; }
 
-/* 医療関係者タブ */
-.med-tabs { display:flex; gap:4px; margin-bottom:24px; flex-wrap:wrap; border-bottom:2px solid var(--border); padding-bottom:0; }
-.med-tab {
-  padding:10px 18px; font-size:14px; font-weight:600; cursor:pointer;
-  background:none; border:none; border-bottom:2px solid transparent; margin-bottom:-2px;
-  color:var(--text-light); transition:color 0.2s, border-color 0.2s;
-}
-.med-tab.active { color:var(--primary); border-bottom-color:var(--primary); }
-.med-tab:hover { color:var(--primary); }
-
-.med-tab-content { display:none; }
-.med-tab-content.active { display:block; }
+/* 医療関係者 縦並びブロック */
+.med-stack { display:flex; flex-direction:column; gap:32px; }
+.med-block { }
+.med-block-title { font-family:"Noto Serif JP",serif; font-size:18px; color:var(--primary-dark); font-weight:600; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid var(--primary-light); }
 
 .med-tab-note { font-size:13px; color:var(--text-light); margin-bottom:16px; }
 
