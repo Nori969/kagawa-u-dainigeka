@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="hero hero-video" style="min-height:100vh; display:flex;">
+<section id="sec-hero" class="hero hero-video" style="min-height:100vh; display:flex;">
   <video class="hero-video-bg" autoplay muted loop playsinline>
     <source src="/kagawa-u-dainigeka/video/hero-bg.mp4" type="video/mp4">
   </video>
@@ -17,7 +17,20 @@
   </div>
 </section>
 
-<section class="proto-section proto-intro">
+<!-- スクロールナビゲーション -->
+<nav class="page-scroll-nav" id="pageScrollNav">
+  <div class="page-scroll-nav-inner">
+    <a href="#sec-about" class="psn-item">About Us</a>
+    <a href="#sec-thoracic" class="psn-item">呼吸器外科</a>
+    <a href="#sec-breast" class="psn-item">乳腺内分泌外科</a>
+    <a href="#sec-patients" class="psn-item">患者さんへ</a>
+    <a href="#sec-medical" class="psn-item">医療関係者へ</a>
+    <a href="#sec-mission" class="psn-item">Mission</a>
+    <a href="#sec-news" class="psn-item">News</a>
+  </div>
+</nav>
+
+<section id="sec-about" class="proto-section proto-intro">
   <div class="proto-container">
     <p class="proto-eyebrow">About Us</p>
     <h2 class="proto-h2">呼吸器外科と乳腺内分泌外科、<br>2つの診療科がひとつの教室に</h2>
@@ -28,7 +41,7 @@
   </div>
 </section>
 
-<section class="proto-section dept-block dept-block-thoracic">
+<section id="sec-thoracic" class="proto-section dept-block dept-block-thoracic">
   <div class="proto-container">
     <div class="dept-block-grid">
       <div class="dept-block-image">
@@ -54,7 +67,7 @@
   </div>
 </section>
 
-<section class="proto-section dept-block dept-block-breast">
+<section id="sec-breast" class="proto-section dept-block dept-block-breast">
   <div class="proto-container">
     <div class="dept-block-grid dept-block-grid-reverse">
       <div class="dept-block-text">
@@ -80,7 +93,7 @@
   </div>
 </section>
 
-<section class="proto-section proto-for-patients">
+<section id="sec-patients" class="proto-section proto-for-patients">
   <div class="proto-container">
     <p class="proto-eyebrow">For Patients</p>
     <h2 class="proto-h2">患者さんへ</h2>
@@ -117,7 +130,7 @@
   </div>
 </section>
 
-<section class="proto-section proto-for-medical">
+<section id="sec-medical" class="proto-section proto-for-medical">
   <div class="proto-container">
     <p class="proto-eyebrow">For Medical Professionals</p>
     <h2 class="proto-h2">医療関係者の皆様へ</h2>
@@ -125,11 +138,72 @@
       紹介患者様の外来診察は月・水・金曜日に対応しております。胸部でお困りの際はいつでもご相談ください。
       地域の先生方と患者様にとって信頼できる存在となれるよう、最善の治療を行って参ります。
     </p>
-    <a href="/kagawa-u-dainigeka/intro/to-pt-mp/" class="proto-link">ご紹介・予約について →</a>
+
+    <!-- タブ -->
+    <div class="med-tabs">
+      <button class="med-tab active" onclick="showMedTab(event,'tab-th')">外来表（呼吸器）</button>
+      <button class="med-tab" onclick="showMedTab(event,'tab-br')">外来表（乳腺）</button>
+      <button class="med-tab" onclick="showMedTab(event,'tab-ref')">患者さん紹介の流れ</button>
+      <button class="med-tab" onclick="showMedTab(event,'tab-ctr')">総合地域医療連携センター</button>
+    </div>
+
+    <div class="med-tab-content active" id="tab-th">
+      <p class="med-tab-note">※ 緊急手術等で適宜変更となる場合があります。</p>
+      <table class="schedule-table-top">
+        <thead>
+          <tr><th>曜日</th><th>午前</th><th>午後</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>月</td><td>松浦 奈都美</td><td>—</td></tr>
+          <tr><td>火</td><td>—</td><td>—</td></tr>
+          <tr><td>水</td><td>矢島 俊樹（初診）/ 山田 楓</td><td>佐藤 佳代子</td></tr>
+          <tr><td>木</td><td>—</td><td>—</td></tr>
+          <tr><td>金</td><td>矢島 俊樹（初診）/ 三﨑 伯幸</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="med-tab-content" id="tab-br">
+      <p class="med-tab-note">※ 緊急手術等で適宜変更となる場合があります。</p>
+      <table class="schedule-table-top">
+        <thead>
+          <tr><th>曜日</th><th>午前</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>月</td><td>阿部 宣子 / 矢島 玲奈</td></tr>
+          <tr><td>火</td><td>—</td></tr>
+          <tr><td>水</td><td>阿部 宣子 / 矢島 玲奈 / 池内 真由美</td></tr>
+          <tr><td>木</td><td>—</td></tr>
+          <tr><td>金</td><td>池内 真由美</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="med-tab-content" id="tab-ref">
+      <a href="https://www.med.kagawa-u.ac.jp/hosp/shinryoka/chiikirenkei/" target="_blank" rel="noopener" class="med-link-card">
+        <div class="med-link-icon">📋</div>
+        <div>
+          <h4>患者さん紹介の流れ</h4>
+          <p>紹介状の送付先・予約方法・紹介後の返書についてご案内しています</p>
+          <span>香川大学医学部附属病院 地域連携ページへ →</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="med-tab-content" id="tab-ctr">
+      <a href="https://www.med.kagawa-u.ac.jp/hosp/shinryoka/chiikirenkei/" target="_blank" rel="noopener" class="med-link-card">
+        <div class="med-link-icon">🏢</div>
+        <div>
+          <h4>総合地域医療連携センター</h4>
+          <p>紹介・逆紹介・退院支援など、地域の医療機関との連携窓口です</p>
+          <span>総合地域医療連携センターページへ →</span>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
-<section class="proto-section proto-pillars-head">
+<section id="sec-mission" class="proto-section proto-pillars-head">
   <div class="proto-container">
     <p class="proto-eyebrow" style="text-align:center;">Our Mission</p>
     <h2 class="proto-h2" style="text-align:center;">心と身体に優しい外科医療を実践する</h2>
@@ -178,7 +252,7 @@
   </section>
 </a>
 
-<section class="proto-section proto-news">
+<section id="sec-news" class="proto-section proto-news">
   <div class="proto-container">
     <p class="proto-eyebrow">News &amp; Topics</p>
     <h2 class="proto-h2">最新情報</h2>
@@ -224,6 +298,31 @@
 .scroll-cue span { width:1px; height:36px; background:rgba(255,255,255,0.6); animation:scrollPulse 1.8s ease-in-out infinite; }
 .scroll-cue p { font-size:11px; letter-spacing:3px; opacity:0.7; }
 @keyframes scrollPulse { 0%,100%{opacity:0.3;} 50%{opacity:1;} }
+
+/* ページ内スクロールナビ */
+.page-scroll-nav {
+  position:sticky; top:0; z-index:90;
+  background:rgba(255,255,255,0.96); backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+  transform:translateY(-100%);
+  transition:transform 0.3s;
+}
+.page-scroll-nav.visible { transform:translateY(0); }
+.page-scroll-nav-inner {
+  max-width:1000px; margin:0 auto; padding:0 24px;
+  display:flex; gap:0; overflow-x:auto;
+  scrollbar-width:none;
+}
+.page-scroll-nav-inner::-webkit-scrollbar { display:none; }
+.psn-item {
+  flex-shrink:0; padding:12px 16px;
+  font-size:13px; font-weight:600; color:var(--text-light);
+  text-decoration:none; white-space:nowrap;
+  border-bottom:2px solid transparent;
+  transition:color 0.2s, border-color 0.2s;
+}
+.psn-item:hover, .psn-item.active { color:var(--primary); border-bottom-color:var(--primary); }
 
 .proto-container { max-width:1000px; margin:0 auto; padding:0 24px; }
 .proto-section { padding:80px 0; }
@@ -282,7 +381,43 @@
 .patient-link-card p { font-size:14px; color:var(--text-light); margin:0 0 8px; }
 .patient-link-card span { font-size:13px; color:var(--primary-light); font-weight:600; }
 
-.proto-for-medical .proto-link { color:var(--primary); font-weight:600; }
+/* 医療関係者タブ */
+.med-tabs { display:flex; gap:4px; margin-bottom:24px; flex-wrap:wrap; border-bottom:2px solid var(--border); padding-bottom:0; }
+.med-tab {
+  padding:10px 18px; font-size:14px; font-weight:600; cursor:pointer;
+  background:none; border:none; border-bottom:2px solid transparent; margin-bottom:-2px;
+  color:var(--text-light); transition:color 0.2s, border-color 0.2s;
+}
+.med-tab.active { color:var(--primary); border-bottom-color:var(--primary); }
+.med-tab:hover { color:var(--primary); }
+
+.med-tab-content { display:none; }
+.med-tab-content.active { display:block; }
+
+.med-tab-note { font-size:13px; color:var(--text-light); margin-bottom:16px; }
+
+.schedule-table-top {
+  width:100%; border-collapse:collapse; font-size:14px;
+  border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;
+}
+.schedule-table-top th {
+  background:var(--primary-dark); color:#fff;
+  padding:10px 16px; text-align:left; font-weight:600;
+}
+.schedule-table-top td { padding:10px 16px; border-top:1px solid var(--border); color:var(--text); }
+.schedule-table-top tr:nth-child(even) td { background:rgba(0,0,0,0.02); }
+
+.med-link-card {
+  display:flex; align-items:flex-start; gap:20px;
+  background:var(--bg-white); border:1px solid var(--border); border-radius:var(--radius);
+  padding:28px; text-decoration:none; color:var(--text);
+  transition:box-shadow 0.2s, transform 0.2s; max-width:600px;
+}
+.med-link-card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.1); transform:translateX(4px); color:var(--text); }
+.med-link-icon { font-size:32px; flex-shrink:0; margin-top:2px; }
+.med-link-card h4 { font-size:17px; color:var(--primary); margin-bottom:6px; font-weight:700; }
+.med-link-card p { font-size:14px; color:var(--text-light); margin:0 0 10px; }
+.med-link-card span { font-size:13px; color:var(--primary-light); font-weight:600; }
 
 .proto-news { background:var(--bg-white); }
 .proto-cta { background:var(--bg); }
@@ -300,7 +435,52 @@
   .pillar-hero-text h4 { font-size:18px; }
   .proto-cta-inner { grid-template-columns:1fr; }
   .proto-h2 { font-size:22px; }
+  .psn-item { padding:10px 12px; font-size:12px; }
+  .med-tab { padding:8px 12px; font-size:13px; }
 }
 </style>
+
+<script>
+// スクロールナビ表示制御 + スクロールスパイ
+(function(){
+  var nav = document.getElementById('pageScrollNav');
+  var hero = document.getElementById('sec-hero');
+  var sections = ['sec-about','sec-thoracic','sec-breast','sec-patients','sec-medical','sec-mission','sec-news'];
+  var items = document.querySelectorAll('.psn-item');
+
+  window.addEventListener('scroll', function(){
+    var heroBottom = hero.offsetTop + hero.offsetHeight - 80;
+    if(window.scrollY > heroBottom){ nav.classList.add('visible'); }
+    else { nav.classList.remove('visible'); }
+
+    var current = '';
+    sections.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && window.scrollY >= el.offsetTop - 120){ current = id; }
+    });
+    items.forEach(function(item){
+      var href = item.getAttribute('href').replace('#','');
+      item.classList.toggle('active', href === current);
+    });
+  });
+
+  // アンカークリックでスムーズスクロール
+  items.forEach(function(item){
+    item.addEventListener('click', function(e){
+      e.preventDefault();
+      var target = document.getElementById(item.getAttribute('href').replace('#',''));
+      if(target){ window.scrollTo({top: target.offsetTop - 50, behavior:'smooth'}); }
+    });
+  });
+})();
+
+// 医療関係者タブ切り替え
+function showMedTab(e, id){
+  document.querySelectorAll('.med-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.med-tab-content').forEach(function(c){ c.classList.remove('active'); });
+  e.currentTarget.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+</script>
 
 {{ end }}
