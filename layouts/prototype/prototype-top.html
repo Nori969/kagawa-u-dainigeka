@@ -131,7 +131,7 @@
 
 <section class="proto-section proto-news">
   <div class="proto-container">
-    <p class="proto-eyebrow">News &amp; Topics</p>
+    <p class="proto-eyebrow">News & Topics</p>
     <h2 class="proto-h2">最新情報</h2>
     <ul class="news-list" style="margin-top:24px;">
       {{ range first 5 (where .Site.RegularPages "Section" "news") }}
@@ -191,26 +191,41 @@
 .dept-block-grid-reverse { grid-template-columns:1.1fr 1fr; }
 .dept-block-grid-reverse .dept-block-text { order:1; }
 .dept-block-grid-reverse .dept-block-image { order:2; }
-.dept-block-image img { width:100%; height:360px; object-fit:cover; border-radius:var(--radius); box-shadow:0 8px 28px rgba(0,0,0,0.12); }
+
+.dept-block-image img {
+  width:100%; height:360px; object-fit:cover; border-radius:var(--radius);
+  box-shadow:0 8px 28px rgba(0,0,0,0.12);
+}
+
 .dept-block-text h3 { font-family:"Noto Serif JP",serif; font-size:26px; color:var(--primary-dark); line-height:1.5; margin-bottom:18px; }
 .dept-block-sub { display:block; font-size:15px; font-weight:400; color:var(--primary-light); margin-top:8px; letter-spacing:1px; }
 .dept-block-text p { color:var(--text-light); margin-bottom:24px; }
 .proto-link { color:var(--primary); font-weight:600; }
+
 .dept-block-stats { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:24px; }
 .stat-box { background:var(--bg-white); border:1px solid var(--border); border-radius:var(--radius); padding:20px 14px; text-align:center; box-shadow:var(--shadow); }
 .dept-block-breast .stat-box { background:#fff; }
 .stat-num { display:block; font-size:26px; font-weight:700; color:var(--primary); margin-bottom:6px; }
 .stat-label { font-size:12px; color:var(--text-light); }
 
+.proto-pillars { background:var(--primary-dark); color:#fff; }
+.proto-pillars .proto-eyebrow { color:rgba(255,255,255,0.6); }
+.proto-pillars .proto-h2 { color:#fff; }
+
+.pillar-toggle { display:flex; justify-content:center; gap:10px; margin:40px 0 0; flex-wrap:wrap; }
 .proto-pillars-head { background:var(--primary-dark); color:#fff; padding-bottom:0; }
-.proto-pillars-head .proto-eyebrow { color:rgba(255,255,255,0.6); }
-.proto-pillars-head .proto-h2 { color:#fff; }
 
 .pillar-hero-link { display:block; text-decoration:none; }
-.pillar-hero { position:relative; min-height:50vh; overflow:hidden; display:flex; align-items:center; justify-content:center; }
-.pillar-hero-video { position:absolute; top:50%; left:50%; min-width:100%; min-height:100%; width:auto; height:auto; transform:translate(-50%,-50%); object-fit:cover; z-index:0; }
+.pillar-hero {
+  position:relative; min-height:50vh; overflow:hidden; display:flex; align-items:center; justify-content:center;
+}
+.pillar-hero-video {
+  position:absolute; top:50%; left:50%; min-width:100%; min-height:100%; width:auto; height:auto;
+  transform:translate(-50%,-50%); object-fit:cover; z-index:0;
+}
 .pillar-hero-overlay { position:absolute; inset:0; background:rgba(10,40,70,0.6); z-index:1; transition:background 0.3s; }
 .pillar-hero-link:hover .pillar-hero-overlay { background:rgba(10,40,70,0.45); }
+
 .pillar-hero-text { position:relative; z-index:2; text-align:center; color:#fff; padding:0 24px; }
 .pillar-hero-num { font-family:"Noto Serif JP",serif; font-size:13px; letter-spacing:4px; opacity:0.6; display:block; margin-bottom:10px; }
 .pillar-hero-text h4 { font-size:24px; font-weight:600; letter-spacing:1px; margin-bottom:14px; transition:letter-spacing 0.3s; }
@@ -218,6 +233,7 @@
 .pillar-hero-text p { font-size:14px; opacity:0.85; max-width:480px; margin:0 auto; }
 
 .proto-news { background:var(--bg-white); }
+
 .proto-cta { background:var(--bg); }
 .proto-cta-inner { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .cta-card { background:var(--bg-white); border:1px solid var(--border); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); }
@@ -227,7 +243,8 @@
 
 @media (max-width:768px) {
   .dept-block-grid, .dept-block-grid-reverse { grid-template-columns:1fr; }
-  .dept-block-grid-reverse .dept-block-text, .dept-block-grid-reverse .dept-block-image { order:initial; }
+  .dept-block-grid-reverse .dept-block-text,
+  .dept-block-grid-reverse .dept-block-image { order:initial; }
   .dept-block-image img { height:240px; }
   .pillar-hero { min-height:40vh; }
   .pillar-hero-text h4 { font-size:18px; }
@@ -235,5 +252,6 @@
   .proto-h2 { font-size:22px; }
 }
 </style>
+</script>
 
 {{ end }}

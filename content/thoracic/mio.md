@@ -45,6 +45,8 @@ description: "胸腔鏡手術・ロボット支援手術・区域切除"
 
 術者が同じ手術室にある操縦室（サージョンコンソール）で操作し、手術用ロボット ダビンチのアームを動かすことで、より繊細な手術が可能となります。
 
+当科のダビンチによる肺区域切除数は<strong>国内第1位</strong>です。
+
 <div style="margin: 24px 0; text-align: center;">
   <video autoplay muted loop playsinline style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
     <source src="/kagawa-u-dainigeka/video/rats-s3b.mp4" type="video/mp4">
