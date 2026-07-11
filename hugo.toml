@@ -2,6 +2,7 @@ baseURL = "https://nori969.github.io/kagawa-u-dainigeka/"
 locale = "ja"
 title = "香川大学医学部附属病院 呼吸器・乳腺内分泌外科"
 publishDir = "docs"
+buildFuture = true
 
 [params]
   description = "香川大学医学部附属病院 呼吸器・乳腺内分泌外科の公式ウェブサイト"
