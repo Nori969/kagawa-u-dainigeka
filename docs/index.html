@@ -377,7 +377,7 @@
       
       <li class="news-item">
         <span class="news-date">2026.07.30</span>
-        <span class="news-title"><a href="https://nori969.github.io/kagawa-u-dainigeka/news/instagram-start/">公式Instagramを開設しました</a></span>
+        <span class="news-title"><a href="https://nori969.github.io/kagawa-u-dainigeka/news/instagram-start/">ホームページに公式Instagramへのリンクを追加しました</a></span>
       </li>
       
       <li class="news-item">
@@ -394,6 +394,22 @@
     <a href="/kagawa-u-dainigeka/news/" class="section-link" style="margin-top:16px;">一覧を見る</a>
   </div>
 </section>
+
+
+<section class="proto-section instagram-banner">
+  <div class="proto-container instagram-banner-inner">
+    <div class="instagram-banner-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+    </div>
+    <p class="proto-eyebrow" style="color:rgba(255,255,255,0.85);">Follow Us</p>
+    <h2 class="proto-h2 instagram-banner-title">最新情報はInstagramでも発信中</h2>
+    <p class="proto-lead instagram-banner-lead">診療科の日々の様子や最新のお知らせを、Instagramでも随時発信しています。ぜひフォローしてご覧ください。</p>
+    <a href="https://www.instagram.com/general_thoracic_kagawa2" target="_blank" rel="noopener" class="instagram-banner-btn">
+      @general_thoracic_kagawa2 を見る →
+    </a>
+  </div>
+</section>
+
 
 <section class="proto-section proto-cta">
   <div class="proto-container proto-cta-inner">
@@ -518,6 +534,22 @@
 .med-link-card span { font-size:13px; color:var(--primary-light); font-weight:600; }
 
 .proto-news { background:var(--bg-white); }
+
+.instagram-banner {
+  background: linear-gradient(135deg, #405de6 0%, #5b51d8 20%, #833ab4 40%, #c13584 60%, #e1306c 80%, #fd1d1d 100%);
+  text-align: center;
+}
+.instagram-banner-inner { display:flex; flex-direction:column; align-items:center; }
+.instagram-banner-icon { color:#fff; margin-bottom:16px; }
+.instagram-banner-title { color:#fff; }
+.instagram-banner-lead { color:rgba(255,255,255,0.9); margin:0 auto 28px; }
+.instagram-banner-btn {
+  display:inline-block; background:#fff; color:#c13584; font-weight:700;
+  padding:14px 32px; border-radius:999px; font-size:15px; letter-spacing:0.5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.instagram-banner-btn:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,0.2); color:#c13584; }
+
 .proto-cta { background:var(--bg); }
 .proto-cta-inner { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .cta-card { background:var(--bg-white); border:1px solid var(--border); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); }
