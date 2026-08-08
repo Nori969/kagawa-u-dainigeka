@@ -3,6 +3,7 @@ locale = "ja"
 title = "香川大学医学部附属病院 呼吸器・乳腺内分泌外科"
 publishDir = "docs"
 buildFuture = true
+enableRobotsTXT = true
 
 [params]
   description = "香川大学医学部附属病院 呼吸器・乳腺内分泌外科の公式ウェブサイト"
@@ -10,6 +11,7 @@ buildFuture = true
   tel = "087-891-2191"
   fax = "087-891-2192"
   instagram = "https://www.instagram.com/general_thoracic_kagawa2"
+  ogImage = "https://nori969.github.io/kagawa-u-dainigeka/images/yajima-portrait.jpg"
 
 [menu]
   [[menu.main]]

@@ -3,8 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ .Site.Params.description }}">
+  {{- $title := cond .IsHome .Site.Title (printf "%s | %s" .Title .Site.Title) -}}
+  {{- $desc := .Site.Params.description -}}
+  {{- if .Description }}{{ $desc = .Description }}{{ else if not .IsHome }}{{ with .Summary }}{{ $desc = . | plainify | replaceRE `\s+` " " | truncate 120 }}{{ end }}{{ end -}}
+  {{- $image := .Site.Params.ogImage -}}
+  {{- with .Params.image }}{{ $image = . | absURL }}{{ end -}}
+  <title>{{ $title }}</title>
+  <meta name="description" content="{{ $desc }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ $image }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $desc }}">
+  <meta name="twitter:image" content="{{ $image }}">
+
+  {{ if .IsHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": {{ .Site.Title }},
+    "url": {{ .Site.BaseURL }},
+    "description": {{ .Site.Params.description }},
+    "telephone": {{ .Site.Params.tel }},
+    "faxNumber": {{ .Site.Params.fax }},
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": {{ .Site.Params.address }},
+      "addressCountry": "JP"
+    },
+    "medicalSpecialty": ["Thoracic Surgery", "Breast Surgery"],
+    "sameAs": [{{ .Site.Params.instagram }}]
+  }
+  </script>
+  {{ end }}
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">

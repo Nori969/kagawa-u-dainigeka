@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nori969.github.io/kagawa-u-dainigeka/sitemap.xml
